@@ -10,7 +10,7 @@ class BaseController extends Controller
     var $url = 'https://gateway.marvel.com:443/v1/public/';
 
 
-    public function index($offset=0, Request $request) {
+    public function index($offset=0) {
         $url = $this->url .'characters?offset='. $offset.'&';
         $result = json_decode($this->makeRequest($url));
         if(!isset($result->data)) {
