@@ -3,7 +3,7 @@
 @section('content')
 
     <style>
-       
+
 
     </style>
 
@@ -41,13 +41,13 @@
         </div>
         <div class="buttons">
             @if ($offset != 0)
-                <a href="{{ route('index', $offset - 20) }}" class="btn btn-light">Anterior</a>
+                <a href="{{ route('index', $offset - 20) }}" class="btn btn-light">Previous</a>
             @else
                 <a href="{{ route('index', $offset - 20) }}" class=""></a>
             @endif
 
             @if ($total >= $offset + 20)
-                <a href="{{ route('index', $offset + 20) }}" class="btn btn-light">Próximo</a>
+                <a href="{{ route('index', $offset + 20) }}" class="btn btn-light">Next</a>
             @endif
         </div>
     @endif
