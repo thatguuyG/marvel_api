@@ -32,10 +32,10 @@ class BaseController extends Controller
         }
 
         $result = json_decode($this->makeRequest($url));
-        $total = $result->data->total;
         if(!isset($result->data) || !isset($total)) {
             abort(404);
         }
+        $total = $result->data->total;
         $result = $result->data->results;
         return view('welcome', ['result'=>$result, 'offset'=>$offset, 'total'=> $total]);
     }
