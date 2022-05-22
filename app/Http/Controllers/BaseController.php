@@ -33,7 +33,7 @@ class BaseController extends Controller
 
         $result = json_decode($this->makeRequest($url));
         $total = $result->data->total;
-        if(!isset($result->data)) {
+        if(!isset($result->data) || !isset($total)) {
             abort(404);
         }
         $result = $result->data->results;
