@@ -28,8 +28,7 @@ class MarvelComics extends Controller
         }
         $result = $result->data->results;
         foreach ($result as $r) {
-            $image_path = $r->images[0];
-            if (isset($image_path)) {
+            if (isset($r->images)) {
                 return $r->images[0]->path.'.'.$r->images[0]->extension;
             }
             return false;
