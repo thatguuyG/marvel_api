@@ -50,6 +50,8 @@
                             $img_url = \App\Http\Controllers\MarvelComics::getComicImg($id);
                             ?>
 
+                            @if ($img_url != null)
+
                             <div class="box-item ">
                                 <div class="flip-box">
                                     <div class="flip-box-front text-center shadow-lg p-3 mb-5 bg-body rounded"
@@ -66,6 +68,10 @@
                                     </div>
                                 </div>
                             </div>
+
+                            @else
+                            <p>No results</p>
+                            @endif
 
 
                         </div>
