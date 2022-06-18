@@ -47,8 +47,8 @@ class BaseController extends Controller
 
     // helper functions
     public function generateURL($url) {
-        $public_key = '909d40f18a7eccacf364951beb350faf';
-        $private_key = '17b826abaf170ac90f90ed55e47616d94c69aacd';
+        $public_key = config('services.marvel.public_key');
+        $private_key = config('services.marvel.private_key');
 
         $ts= time();
         $hash = md5($ts.$private_key.$public_key);
