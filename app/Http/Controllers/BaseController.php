@@ -36,8 +36,12 @@ class BaseController extends Controller
             abort(404);
         }
         $total = $result->data->total;
-        $result = $result->data->results;
-        return view('welcome', ['result'=>$result, 'offset'=>$offset, 'total'=> $total]);
+        if ($total > 0) {
+            $result = $result->data->results;
+            return view('welcome', ['result'=>$result, 'offset'=>$offset, 'total'=> $total]);
+        }
+
+        return view('nodata');
     }
 
 
