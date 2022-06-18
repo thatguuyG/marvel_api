@@ -171,6 +171,7 @@ c<!doctype html>
                 <form class="d-flex" action="{{ route('search') }}" action="GET">
                     <input name="name" class="form-control me-2" type="search" placeholder="Enter your Keywords"
                         aria-label="Search" value="<?= $_GET['name'] ?? '' ?>" required>
+                    <input type="hidden" name="csrf" value="{{ csrf_token() }}">
                     <button class="btn btn-outline-success" type="submit">Search</button>
                 </form>
             </div>
