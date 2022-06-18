@@ -7,10 +7,6 @@
 
     </style>
 
-
-    @if ($total == 0)
-        <p>No results</p>
-    @else
         <div class="container mt-4">
             <div class="row">
                 @foreach ($result as $r)
@@ -39,7 +35,7 @@
             </div>
 
         </div>
-        <div class="buttons">
+        {{-- <div class="buttons">
             @if ($offset != 0)
                 <a href="{{ route('index', $offset - 20) }}" class="btn btn-light">Previous</a>
             @else
@@ -49,6 +45,6 @@
             @if ($total >= $offset + 20)
                 <a href="{{ route('index', $offset + 20) }}" class="btn btn-light">Next</a>
             @endif
-        </div>
-    @endif
+        </div> --}}
+
 @endsection
