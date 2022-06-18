@@ -156,6 +156,15 @@
             height: 100%;
         }
 
+        #navbar {
+            background: #fff !important;
+        }
+
+        bg-dark {
+            --bs-bg-opacity: 0.1 !important;
+            background: rgba(255, 255, 255, 0.25) !important;
+        }
+
     </style>
 </head>
 
@@ -164,6 +173,7 @@
     <canvas id="projector">Your browser does not support the Canvas element.</canvas>
 
     <div class="main">
+        <br>
 
         <nav class="navbar navbar-dark bg-dark">
             <div class="container-fluid">
