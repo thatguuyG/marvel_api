@@ -6,4 +6,4 @@ Uses custom middleware to implement caching for maximum performance
 
 Live version of this app is deployed on heroku here: https://stark-tor-12387.herokuapp.com/
 
-NB: This app requires PHP vers 8 
+NB: This app requires PHP vers 8+
